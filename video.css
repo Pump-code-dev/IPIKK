@@ -1,0 +1,13 @@
+#videoTrigger {
+  width: 420px;   /* largura aproximada igual à da imagem */
+  height: 240px;  /* altura proporcional (16:9) */
+  border-radius: 12px; /* opcional, para cantos arredondados */
+  box-shadow: 0 0 12px rgba(0,0,0,0.3); /* leve sombra para destaque */
+}
+
+@media (max-width: 768px) {
+  #videoTrigger {
+    width: 90%;
+    height: auto;
+  }
+}
