@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPIKK — Instituto Politécnico Industrial do Kilamba Kiaxi Nova Vida</title>
+    <meta name="description" content="IPIKK: Ensino técnico profissional em Construção Civil, Eletricidade, Frio e Climatização, Informática, Móveis, GSI e Desenho Projectista. Solicite serviços ou veja o nosso portfólio.">
+
+    <!-- Font Awesome (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/video.css">
+</head>
+<body>
+
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <div class="logo-big">IPIKK<span>.</span></div>
+        <div class="preloader-spinner"></div>
+        <div class="preloader-bar"></div>
+    </div>
+
+    <!-- ===== CURSOR ===== -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- ===== PROGRESS BAR ===== -->
+    <div id="progress-bar"></div>
+
+    <!-- ===== SKIP LINK ===== -->
+    <a href="#main" class="skip-link">Saltar para o conteúdo principal</a>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header" role="banner">
+        <div class="container header-flex">
+            <div class="logo">IPIKK<span>.</span><small>Instituto Politécnico Industrial</small></div>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav role="navigation">
+                <ul id="nav-menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li>
+                        <a href="#servicos">Serviços</a>
+                        <div class="mega-dropdown">
+                            <a href="#servicos"><i class="fas fa-hard-hat" style="width:20px;"></i> Construção Civil</a>
+                            <a href="#servicos"><i class="fas fa-bolt" style="width:20px;"></i> Eletricidade</a>
+                            <a href="#servicos"><i class="fas fa-snowflake" style="width:20px;"></i> Frio e Climatização</a>
+                            <a href="#servicos"><i class="fas fa-laptop-code" style="width:20px;"></i> Informática</a>
+                            <a href="#servicos"><i class="fas fa-chair" style="width:20px;"></i> Tecnologias de Móveis</a>
+                            <a href="#servicos"><i class="fas fa-chart-line" style="width:20px;"></i> GSI</a>
+                            <a href="#servicos"><i class="fas fa-drafting-compass" style="width:20px;"></i> DP</a>
+                        </div>
+                    </li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#orcamentos">Orçamentos</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main id="main">
+
+        <!-- ===== HERO ===== -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <canvas id="hero-canvas"></canvas>
+            <div class="container hero-grid">
+                <div class="hero-content fade-up">
+                    <span class="section-tag">Excelência Académica</span>
+                    <h1 id="hero-title"><span class="typewriter"></span></h1>
+                    <p>Conheça o portfólio do IPIKK e contrate serviços especializados nas áreas de Construção, Eletricidade, Frio e Climatização, Informática, Design e Gestão.</p>
+                    <div class="hero-buttons">
+                        <a href="#orcamentos" class="btn-primary"><i class="fas fa-paper-plane"></i>Solicitar Orçamento</a>
+                        <a href="#portfolio" class="btn-secondary">Ver Portfólio</a>
+                    </div>
+                </div>
+                <div class="fade-up" style="transition-delay:0.2s;">
+                    <video id="videoTrigger" controls poster="IPIKK-Video.jpg" width="640">
+  <source src="IPIKK.mp4" type="video/mp4">
+  <source src="IPIKK-Video.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
+                    <div class="hero-stats" style="margin-top:24px;">
+                        <div class="stat"><h3 id="stat1">0</h3><p>Cursos Técnicos</p></div>
+                        <div class="stat"><h3 id="stat2">0</h3><p>Alunos Formados</p></div>
+                        <div class="stat"><h3 id="stat3">0</h3><p>Parceiros</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVIÇOS ===== -->
+        <section id="servicos" class="section-padding" aria-labelledby="servicos-title">
+            <div class="container">
+                <div class="text-center fade-up">
+                    <span class="section-tag">O que fazemos</span>
+                    <h2 class="section-title">Nossos <span>Serviços</span> Técnicos</h2>
+                    <p class="section-sub mx-auto">Cada curso oferece serviços práticos realizados pelos alunos sob supervisão docente, garantindo qualidade e inovação.</p>
+                </div>
+                <div class="services-grid" id="servicesGrid">
+                    <div class="service-card fade-up d-1"><div class="icon"><i class="fas fa-hard-hat"></i></div><h3>Construção Civil</h3><p>Execução de estruturas, acabamentos, fiscalização e pequenas obras residenciais e comerciais.</p><a href="#orcamentos" class="btn-small-link">Solicitar <i class="fas fa-arrow-right"></i></a></div>
+                    <div class="service-card fade-up d-2"><div class="icon"><i class="fas fa-bolt"></i></div><h3>Eletricidade</h3><p>Instalações elétricas residenciais/industriais, manutenção, quadros de distribuição e energias renováveis.</p><a href="#orcamentos" class="btn-small-link">Solicitar <i class="fas fa-arrow-right"></i></a></div>
+                    <div class="service-card fade-up d-3"><div class="icon"><i class="fas fa-snowflake"></i></div><h3>Frio e Climatização</h3><p>Instalação, manutenção e reparação de sistemas de refrigeração, ar condicionado, bombas de calor e ventilação.</p><a href="#orcamentos" class="btn-small-link">Solicitar <i class="fas fa-arrow-right"></i></a></div>
+                    <div class="service-card fade-up d-4"><div class="icon"><i class="fas fa-laptop-code"></i></div><h3>Informática</h3><p>Desenvolvimento de software, redes de computadores, suporte técnico e segurança da informação.</p><a href="#orcamentos" class="btn-small-link">Solicitar <i class="fas fa-arrow-right"></i></a></div>
+                    <div class="service-card fade-up d-5"><div class="icon"><i class="fas fa-chair"></i></div><h3>Tecnologias de Móveis</h3><p>Fabricação e restauro de mobiliário, design de interiores, marcenaria e carpintaria moderna.</p><a href="#orcamentos" class="btn-small-link">Solicitar <i class="fas fa-arrow-right"></i></a></div>
+                    <div class="service-card fade-up d-6"><div class="icon"><i class="fas fa-chart-line"></i></div><h3>GSI</h3><p>Gestão de Sistemas de Informação, consultoria em processos de negócio e análise de dados.</p><a href="#orcamentos" class="btn-small-link">Solicitar <i class="fas fa-arrow-right"></i></a></div>
+                    <div class="service-card fade-up d-6"><div class="icon"><i class="fas fa-drafting-compass"></i></div><h3>DP (Desenho Projectista)</h3><p>Elaboração de plantas, projetos arquitetónicos, modelagem 3D e CAD técnico.</p><a href="#orcamentos" class="btn-small-link">Solicitar <i class="fas fa-arrow-right"></i></a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PORTFÓLIO ===== -->
+        <section id="portfolio" class="section-padding" style="background:var(--bg-secondary);" aria-labelledby="portfolio-title">
+            <div class="container">
+                <div class="text-center fade-up">
+                    <span class="section-tag">Trabalhos reais</span>
+                    <h2 class="section-title">Nosso <span>Portfólio</span> Prático</h2>
+                    <p class="section-sub mx-auto">Projetos executados pelos nossos alunos, com resultados que comprovam a excelência do ensino do IPIKK.</p>
+                </div>
+                <div class="filter-buttons fade-up" role="tablist">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="Construção Civil">Construção</button>
+                    <button class="filter-btn" data-filter="Eletricidade">Eletricidade</button>
+                    <button class="filter-btn" data-filter="Frio e Climatização">Frio e Climatização</button>
+                    <button class="filter-btn" data-filter="Informática">Informática</button>
+                    <button class="filter-btn" data-filter="Móveis">Móveis</button>
+                    <button class="filter-btn" data-filter="GSI">GSI</button>
+                    <button class="filter-btn" data-filter="DP">DP</button>
+                </div>
+                <div class="portfolio-grid" id="portfolioGrid"></div>
+            </div>
+        </section>
+
+        <!-- ===== SOBRE ===== -->
+        <section id="sobre" class="section-padding" aria-labelledby="sobre-title">
+            <div class="container sobre-grid">
+                <div class="fade-up">
+                    <span class="section-tag">Quem somos</span>
+                    <h2 class="section-title" id="sobre-title">Excelência que <span>transforma</span> vidas</h2>
+                    <p>O IPIKK, localizado na Urbanização Nova Vida, Kilamba Kiaxi, é uma instituição de referência no ensino técnico-profissional em Angola. Formamos técnicos qualificados com uma abordagem prática e inovadora.</p>
+                    <p style="margin-top:14px;">A nossa missão é capacitar os jovens com competências técnicas de alto nível, promovendo o empreendedorismo e a inserção no mercado de trabalho.</p>
+                    <div class="sobre-valores"><span>🎯 Missão</span><span>👁️ Visão</span><span>❤️ Integridade</span><span>🤝 Inovação</span></div>
+                    <div style="margin-top:28px;"><a href="#orcamentos" class="btn-primary"><i class="fas fa-comment-dots"></i>Fale Connosco</a></div>
+                </div>
+                <div class="fade-up" style="transition-delay:0.2s;">
+                    <img src="https://placehold.co/600x400/1A3A5C/FFFFFF?text=IPIKK+-+Oficinas+e+Alunos" alt="Alunos do IPIKK" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTEMUNHOS ===== -->
+        <section id="testemunhos" class="section-padding" style="background:var(--bg-secondary);">
+            <div class="container">
+                <div class="text-center fade-up">
+                    <span class="section-tag">Depoimentos</span>
+                    <h2 class="section-title">O que dizem sobre <span>nós</span></h2>
+                    <p class="section-sub mx-auto">A opinião de quem já viveu a experiência IPIKK.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-up d-1"><div class="avatar"><i class="fas fa-user-tie"></i></div><blockquote>"O IPIKK transformou a minha vida. Hoje sou técnico de refrigeração reconhecido na minha comunidade."</blockquote><div class="author">João André</div><div class="role">Ex-aluno, Frio e Climatização</div></div>
+                    <div class="testimonial-card fade-up d-2"><div class="avatar"><i class="fas fa-building"></i></div><blockquote>"Contratamos estagiários do IPIKK e ficámos impressionados com a preparação prática e ética profissional."</blockquote><div class="author">Eng.ª Maria Silva</div><div class="role">Directora Técnica</div></div>
+                    <div class="testimonial-card fade-up d-3"><div class="avatar"><i class="fas fa-chalkboard-teacher"></i></div><blockquote>"A qualidade do ensino e o acompanhamento dos alunos são exemplares. O IPIKK é um orgulho para o Kilamba Kiaxi."</blockquote><div class="author">Prof. Carlos Mendes</div><div class="role">Coordenador Pedagógico</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ ===== -->
+        <section id="faq" class="section-padding">
+            <div class="container">
+                <div class="text-center fade-up">
+                    <span class="section-tag">Dúvidas</span>
+                    <h2 class="section-title">Perguntas <span>Frequentes</span></h2>
+                    <p class="section-sub mx-auto">Esclareça as suas dúvidas sobre os nossos serviços e processo de contratação.</p>
+                </div>
+                <div class="faq-list fade-up">
+                    <div class="faq-item"><button class="faq-question">Como posso solicitar um orçamento? <i class="fas fa-chevron-down"></i></button><div class="faq-answer">Basta preencher o formulário na secção "Orçamentos" com os seus dados e descrição do trabalho. Entraremos em contacto em até 24h.</div></div>
+                    <div class="faq-item"><button class="faq-question">Os serviços são realizados por alunos ou professores? <i class="fas fa-chevron-down"></i></button><div class="faq-answer">Os serviços são executados por alunos sob supervisão direta de docentes especializados, garantindo qualidade e segurança.</div></div>
+                    <div class="faq-item"><button class="faq-question">Que tipos de projetos constam no portfólio? <i class="fas fa-chevron-down"></i></button><div class="faq-answer">O portfólio inclui projetos reais realizados pelos nossos alunos, com fotos de antes/depois e resultados mensuráveis.</div></div>
+                    <div class="faq-item"><button class="faq-question">Como posso oferecer uma vaga de estágio? <i class="fas fa-chevron-down"></i></button><div class="faq-answer">Utilize o formulário na secção "Estágios e Parcerias" para submeter a sua vaga ou proposta de parceria.</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ORÇAMENTOS ===== -->
+        <section id="orcamentos" class="section-padding" style="background:var(--bg-secondary);">
+            <div class="container">
+                <div class="text-center fade-up">
+                    <span class="section-tag">Solicite já</span>
+                    <h2 class="section-title">Pedido de <span>Orçamento</span></h2>
+                    <p class="section-sub mx-auto">Preencha o formulário abaixo e entraremos em contacto consigo no prazo máximo de 24 horas.</p>
+                </div>
+                <div class="form-card fade-up">
+                    <form id="orcamento-form" novalidate>
+                        <div class="form-row">
+                            <div class="float-group"><input type="text" id="nome" placeholder=" " required minlength="2"><label>Nome completo <span class="required">*</span></label><div class="error-msg">Campo obrigatório</div></div>
+                            <div class="float-group"><input type="email" id="email" placeholder=" " required><label>Email <span class="required">*</span></label><div class="error-msg">Email inválido</div></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="float-group"><input type="tel" id="telefone" placeholder=" " required pattern="(\+244|00244)?[0-9]{9}"><label>Telefone <span class="required">*</span></label><div class="error-msg">Formato: +244 xxx xxx xxx</div></div>
+                            <div class="float-group"><select id="servico" required><option value="" disabled selected></option><option>Construção Civil</option><option>Eletricidade</option><option>Frio e Climatização</option><option>Informática</option><option>Tecnologias de Móveis</option><option>GSI</option><option>DP</option></select><label>Serviço <span class="required">*</span></label><div class="error-msg">Selecione uma opção</div></div>
+                        </div>
+                        <div class="float-group"><textarea id="descricao" placeholder=" " required minlength="20"></textarea><label>Descrição do trabalho <span class="required">*</span></label><div class="error-msg">Mínimo 20 caracteres</div></div>
+                        <div class="form-row">
+                            <div class="float-group"><input type="file" id="ficheiro" accept=".jpg,.jpeg,.png,.pdf" style="padding-top:22px;"><label>Anexar ficheiro (imagem/PDF)</label></div>
+                            <div class="float-group"><input type="text" id="localizacao" placeholder=" " required><label>Localização <span class="required">*</span></label><div class="error-msg">Campo obrigatório</div></div>
+                        </div>
+                        <div class="float-group"><select id="urgencia" required><option value="" disabled selected></option><option value="Normal">Normal</option><option value="Urgente">Urgente</option><option value="Muito Urgente">Muito Urgente</option></select><label>Urgência <span class="required">*</span></label><div class="error-msg">Selecione uma opção</div></div>
+                        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i>Enviar Orçamento</button>
+                        <div id="orcamento-success" class="success-message"><i class="fas fa-check-circle" style="font-size:1.4rem;"></i> Obrigado! O seu pedido foi enviado com sucesso. (Simulação)</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ESTÁGIOS ===== -->
+        <section id="estagios" class="section-padding">
+            <div class="container">
+                <div class="text-center fade-up">
+                    <span class="section-tag">Oportunidades</span>
+                    <h2 class="section-title">Estágios e <span>Parcerias</span></h2>
+                    <p class="section-sub mx-auto">Empresas, submeta as suas vagas de estágio ou propostas de parceria.</p>
+                </div>
+                <div class="estagios-grid">
+                    <div class="fade-up">
+                        <h3 style="font-family:var(--font-heading); font-size:1.4rem; margin-bottom:20px;">📢 Vagas Abertas</h3>
+                        <div class="vaga-card"><h4>Estágio em Frio e Climatização</h4><p>Empresa de refrigeração procura estagiário para manutenção de AC. <strong>Candidatura até 15/07.</strong></p></div>
+                        <div class="vaga-card"><h4>Estágio em Eletricidade</h4><p>Empresa de energia solar procura estagiário para instalações fotovoltaicas. <strong>3 vagas.</strong></p></div>
+                        <div class="vaga-card"><h4>Construção Civil</h4><p>Obra na Nova Vida precisa de assistente de engenharia.</p></div>
+                    </div>
+                    <div class="fade-up" style="transition-delay:0.2s;">
+                        <h3 style="font-family:var(--font-heading); font-size:1.4rem; margin-bottom:20px;">📝 Submeter Vaga / Parceria</h3>
+                        <form id="parceria-form" class="form-card" style="padding:28px; box-shadow:none; border:2px solid var(--border-color); background:var(--bg-secondary);">
+                            <div class="float-group"><input type="text" id="empresa-nome" placeholder=" " required><label>Empresa <span class="required">*</span></label><div class="error-msg">Obrigatório</div></div>
+                            <div class="float-group"><input type="email" id="empresa-email" placeholder=" " required><label>Email <span class="required">*</span></label><div class="error-msg">Email inválido</div></div>
+                            <div class="float-group"><select id="empresa-tipo" required><option value="" disabled selected></option><option>Oferecer Estágio</option><option>Proposta de Parceria</option></select><label>Tipo <span class="required">*</span></label><div class="error-msg">Selecione</div></div>
+                            <div class="float-group"><textarea id="empresa-msg" placeholder=" " required minlength="20"></textarea><label>Mensagem <span class="required">*</span></label><div class="error-msg">Mínimo 20 caracteres</div></div>
+                            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;"><i class="fas fa-handshake"></i>Enviar Proposta</button>
+                            <div id="parceria-success" class="success-message"><i class="fas fa-check-circle" style="font-size:1.4rem;"></i> Proposta enviada! (Simulação)</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BLOG ===== -->
+        <section id="blog" class="section-padding" style="background:var(--bg-secondary);">
+            <div class="container">
+                <div class="text-center fade-up">
+                    <span class="section-tag">Atualizações</span>
+                    <h2 class="section-title">Notícias e <span>Eventos</span></h2>
+                    <p class="section-sub mx-auto">Fique por dentro do que acontece no IPIKK.</p>
+                </div>
+                <div class="blog-grid">
+                    <div class="blog-card fade-up d-1"><img src="https://placehold.co/600x300/1A3A5C/FFFFFF?text=Feira+de+Profissões" alt="Feira" loading="lazy"><div class="content"><span class="date">12 Jun 2026</span><h4>IPIKK realiza Feira de Profissões</h4><p>Alunos apresentaram projetos inovadores.</p></div></div>
+                    <div class="blog-card fade-up d-2"><img src="https://placehold.co/600x300/0A1628/FFFFFF?text=Parcerias" alt="Parcerias" loading="lazy"><div class="content"><span class="date">02 Jun 2026</span><h4>Novas parcerias com empresas locais</h4><p>Convenções assinadas para estágios.</p></div></div>
+                    <div class="blog-card fade-up d-3"><img src="https://placehold.co/600x300/E8A838/FFFFFF?text=Workshop+CAD" alt="Workshop" loading="lazy"><div class="content"><span class="date">20 Mai 2026</span><h4>Workshop de Desenho Projectista</h4><p>Curso intensivo de modelagem 3D.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div><div class="logo" style="font-size:2rem;">IPIKK<span>.</span></div><p style="margin:14px 0; max-width:320px; line-height:1.8;">Instituto Politécnico Industrial do Kilamba Kiaxi Nova Vida. Formamos técnicos que constroem o futuro de Angola.</p><p><i class="fas fa-map-pin" style="color:var(--destaque); width:20px;"></i> Nova Vida, Kilamba Kiaxi, Luanda</p><p><i class="fas fa-phone" style="color:var(--destaque); width:20px;"></i> +244 999 999 999</p><div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+                <div><h4>Links Rápidos</h4><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a><a href="#orcamentos">Orçamentos</a><a href="#estagios">Estágios</a></div>
+                <div><h4>Cursos</h4><a href="#servicos">Construção Civil</a><a href="#servicos">Eletricidade</a><a href="#servicos">Frio e Climatização</a><a href="#servicos">Informática</a><a href="#servicos">Móveis</a></div>
+                <div><h4>Localização</h4>
+                    <div class="footer-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.456!2d13.2495!3d-8.9755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f4e8b3f7f8d5%3A0x8f4e2b6a7f4e8f9d!2sLuanda%2C%20Angola!5e0!3m2!1spt-PT!2spt!4v1719672000000!5m2!1spt-PT!2spt" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p style="margin-top:10px; font-size:0.85rem;">Urbanização Nova Vida, Kilamba Kiaxi</p>
+                </div>
+            </div>
+            <div class="footer-bottom">© <span id="currentYear"></span> IPIKK. Todos os direitos reservados. | Orgulhosamente feito em Angola.</div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING BUTTONS ===== -->
+    <div class="float-buttons">
+        <a href="tel:+244999999999" class="float-btn call" aria-label="Ligar"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/244999999999?text=Olá%20IPIKK!" class="float-btn whatsapp" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <!-- ===== SCROLL TOP ===== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox-overlay" id="lightbox" role="dialog">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <button class="lightbox-nav prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-nav next" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            <h3 id="lb-title">Projeto</h3>
+            <span class="course-badge" id="lb-course">Curso</span>
+            <img id="lb-img" src="" alt="Projeto">
+            <p id="lb-desc" style="margin:12px 0; color:var(--text-secondary);"></p>
+            <p id="lb-results" style="font-weight:700;"><i class="fas fa-check-circle" style="color:var(--destaque);"></i> Resultados: </p>
+            <div class="lightbox-share">
+                <span>Partilhar:</span>
+                <a href="#" id="share-fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" id="share-tw" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" id="share-li" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" id="share-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div id="cookie-banner">
+        <p><i class="fas fa-cookie-bite" style="color:var(--destaque); margin-right:10px;"></i> Utilizamos cookies para melhorar a sua experiência. Ao continuar, concorda com a nossa <a href="#" style="color:var(--destaque); text-decoration:underline;">política de privacidade</a>.</p>
+        <div class="btn-group">
+            <button class="accept" id="cookieAccept">Aceitar</button>
+            <button id="cookieDecline">Recusar</button>
+        </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT EXTERNO ===== -->
+    <script src="js/script.js"></script>
+</body>
+</html>
